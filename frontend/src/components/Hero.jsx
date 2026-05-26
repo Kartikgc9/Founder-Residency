@@ -60,11 +60,11 @@ export default function Hero() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <h1 className="pixel-title text-[44px] xs:text-[56px] sm:text-[88px] md:text-[120px] lg:text-[148px] leading-[1.05]">
+          <h1 className="pixel-title text-[34px] xs:text-[44px] sm:text-[72px] md:text-[110px] lg:text-[148px] leading-[1.05]">
             FOUNDERS
           </h1>
           <div className="flex flex-wrap items-end gap-4 mt-2">
-            <h1 className="pixel-title-lime text-[44px] xs:text-[56px] sm:text-[88px] md:text-[120px] lg:text-[148px] leading-[1.05]">
+            <h1 className="pixel-title-lime text-[34px] xs:text-[44px] sm:text-[72px] md:text-[110px] lg:text-[148px] leading-[1.05]">
               RESIDENCY
             </h1>
             {/* Pixel A logo */}
