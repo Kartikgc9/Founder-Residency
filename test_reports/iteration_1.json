@@ -1,0 +1,37 @@
+{
+  "summary": "Frontend-only landing page testing for Founders Residency. All 12 requested test scenarios passed: page loads with 0 console errors, all 8 sections + navbar + footer render with correct data-testids, all 4 Luma apply buttons have correct href='https://luma.com/rc82wk5k' and target='_blank', 3 property images render in residency section, FAQ accordion toggle works (faq-item-1 expanded to 102px height after click), nav-about smooth-scroll lands precisely on the about-section (after=1484, target=1483.7), and mobile viewport (375x800) has no horizontal overflow with navbar and hero visible.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "Hero on mobile (375px)",
+        "issues": ["Pixel-title 'FOUNDERS' / 'RESIDENCY' visually overflows the right edge of the viewport (clipped by section overflow-hidden). Page has no horizontal scroll so it's a stylistic choice, but words are cut to 'FOUNDERS' / 'RESIDENC' on a 375px screen — consider reducing the base text size below sm: breakpoint or adding text-clamp for a cleaner mobile look."]
+      },
+      {
+        "screen": "Residency section",
+        "issues": ["data-testids for property tiles include forward-slash characters from labels (e.g. 'property-image-the-villa-/-night', 'property-image-pool-/-recharge'). Selectors still work but slashes inside data-testid are unusual; consider replacing non-word characters with '-' in the slug generator in Residency.jsx ImageTile."]
+      }
+    ]
+  },
+  "test_report_links": [],
+  "action_items": [
+    "(Optional) Improve hero title sizing on small mobile viewports so 'FOUNDERS RESIDENCY' is not visually clipped on the right.",
+    "(Optional) Sanitise property image data-testid slugs to strip non-alphanumeric characters (currently contain '/')."
+  ],
+  "critical_code_review_comments": [
+    "LUMA_URL is hardcoded in 4 separate files (Hero.jsx, Navbar.jsx, Apply.jsx, Footer.jsx). Consider extracting to a shared constants module to keep the URL DRY.",
+    "Residency.jsx ImageTile uses `data.label.toLowerCase().replace(/\\s+/g, '-')` which preserves '/' characters from labels. Suggest replacing with `/[^a-z0-9]+/g` to produce clean slugs.",
+    "All components are well-structured, under 200 lines each, and use proper data-testid coverage. No backend code present (frontend-only app as specified)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (no backend)", "frontend": "100%"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Frontend-only landing page. All sections, nav links, apply buttons, FAQ accordion, smooth scroll, and mobile responsiveness verified working. No console errors. Only minor cosmetic design feedback for mobile hero title overflow. Luma URL was NOT loaded during testing — only href attribute was verified. Tested at https://crypto-realty-6.preview.emergentagent.com."
+}
