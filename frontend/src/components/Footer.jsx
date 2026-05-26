@@ -59,20 +59,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:residency@example.com"
+                  href="mailto:kartikyadav@arrange.co.in"
                   className="font-dot text-[#f0e8d2] text-lg hover:text-[#d5f04e] transition-colors"
                 >
-                  ▸ residency@example.com
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-dot text-[#f0e8d2] text-lg hover:text-[#d5f04e] transition-colors">
-                  ▸ Twitter / X
-                </a>
-              </li>
-              <li>
-                <a href="#" className="font-dot text-[#f0e8d2] text-lg hover:text-[#d5f04e] transition-colors">
-                  ▸ Instagram
+                  ▸ kartikyadav@arrange.co.in
                 </a>
               </li>
             </ul>

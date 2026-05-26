@@ -49,7 +49,7 @@ export default function Apply() {
             APPLY ON LUMA ▸
           </a>
           <a
-            href="mailto:residency@example.com"
+            href="mailto:kartikyadav@arrange.co.in"
             data-testid="apply-contact-btn"
             className="pixel-btn-outline !text-xs !py-4 !px-6"
           >
