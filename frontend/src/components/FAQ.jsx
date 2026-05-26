@@ -4,7 +4,7 @@ import { useReveal } from "../lib/useReveal";
 const FAQS = [
   {
     q: "WHAT DOES IT COST?",
-    a: "There is no program fee. Residents cover their own travel to Delhi NCR. Stay, meals, workshops, and dinners are covered for accepted founders. Spots are merit-based.",
+    a: "The residency is $150 per person for all 20 days — fully inclusive of stay, meals, co-working access, workshops, and curated dinners. Residents cover their own travel to Delhi NCR. Spots are merit-based.",
   },
   {
     q: "DO I NEED TO BE INCORPORATED?",
