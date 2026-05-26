@@ -143,14 +143,14 @@ export default function Hero() {
             }`}
           >
             <div className="relative w-full max-w-md flex items-end justify-center">
-              <PixelMoon className="absolute -top-8 right-6 w-12" />
-              <div className="flex items-end gap-1">
-                <PixelBuilding className="w-12 sm:w-14" />
-                <PixelBuilding tall className="w-12 sm:w-14" />
-                <PixelIndiaGate className="w-28 sm:w-36" />
-                <PixelQutub className="w-16 sm:w-20" />
-                <PixelBuilding className="w-12 sm:w-14" />
-                <PixelBuilding tall className="w-10 sm:w-12" />
+              <PixelMoon className="absolute -top-8 right-6 w-8 sm:w-12" />
+              <div className="flex items-end gap-[2px] sm:gap-1 overflow-x-auto pb-1">
+                <PixelBuilding className="w-8 sm:w-14" />
+                <PixelBuilding tall className="w-8 sm:w-14" />
+                <PixelIndiaGate className="w-20 sm:w-36" />
+                <PixelQutub className="w-12 sm:w-20" />
+                <PixelBuilding className="w-8 sm:w-14" />
+                <PixelBuilding tall className="w-8 sm:w-12" />
               </div>
             </div>
           </div>

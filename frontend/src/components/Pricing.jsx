@@ -45,7 +45,7 @@ export default function Pricing() {
           {/* Price card */}
           <div
             data-testid="price-card"
-            className="reveal relative bg-[#0d3b4f] p-8 sm:p-10 pixel-border flex flex-col justify-between min-h-[420px]"
+            className="reveal relative bg-[#0d3b4f] p-6 sm:p-10 pixel-border flex flex-col justify-between min-h-[360px] sm:min-h-[420px]"
           >
             <div>
               <div className="flex items-center gap-3 mb-6">
@@ -83,7 +83,7 @@ export default function Pricing() {
               </ul>
             </div>
 
-            <p className="font-pixel text-[9px] text-[#c9c0a8] tracking-widest mt-8 leading-relaxed">
+            <p className="font-pixel text-[10px] text-[#c9c0a8] tracking-widest mt-8 leading-relaxed">
               ▸ TRAVEL TO DELHI NCR NOT INCLUDED.<br />
               ▸ ACCEPTANCE IS MERIT-BASED.
             </p>
@@ -137,7 +137,7 @@ export default function Pricing() {
                 {SURPRISES.map((s) => (
                   <span
                     key={s}
-                    className="font-pixel text-[9px] sm:text-[10px] text-[#082b3b] bg-[#d5f04e] px-3 py-2"
+                    className="font-pixel text-[10px] text-[#082b3b] bg-[#d5f04e] px-3 py-2"
                   >
                     {s}
                   </span>
