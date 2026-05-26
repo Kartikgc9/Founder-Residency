@@ -137,7 +137,9 @@ body {
         opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
         transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.reveal.in-view {
+.reveal.in-view,
+.in-view .reveal,
+.in-view.reveal {
     opacity: 1;
     transform: translateY(0);
 }
@@ -149,13 +151,20 @@ body {
         opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
         transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.reveal-stagger.in-view > *:nth-child(1) { transition-delay: 0.05s; }
-.reveal-stagger.in-view > *:nth-child(2) { transition-delay: 0.15s; }
-.reveal-stagger.in-view > *:nth-child(3) { transition-delay: 0.25s; }
-.reveal-stagger.in-view > *:nth-child(4) { transition-delay: 0.35s; }
-.reveal-stagger.in-view > *:nth-child(5) { transition-delay: 0.45s; }
-.reveal-stagger.in-view > *:nth-child(6) { transition-delay: 0.55s; }
-.reveal-stagger.in-view > * {
+.reveal-stagger.in-view > *:nth-child(1),
+.in-view .reveal-stagger > *:nth-child(1) { transition-delay: 0.05s; }
+.reveal-stagger.in-view > *:nth-child(2),
+.in-view .reveal-stagger > *:nth-child(2) { transition-delay: 0.15s; }
+.reveal-stagger.in-view > *:nth-child(3),
+.in-view .reveal-stagger > *:nth-child(3) { transition-delay: 0.25s; }
+.reveal-stagger.in-view > *:nth-child(4),
+.in-view .reveal-stagger > *:nth-child(4) { transition-delay: 0.35s; }
+.reveal-stagger.in-view > *:nth-child(5),
+.in-view .reveal-stagger > *:nth-child(5) { transition-delay: 0.45s; }
+.reveal-stagger.in-view > *:nth-child(6),
+.in-view .reveal-stagger > *:nth-child(6) { transition-delay: 0.55s; }
+.reveal-stagger.in-view > *,
+.in-view .reveal-stagger > * {
     opacity: 1;
     transform: translateY(0);
 }
