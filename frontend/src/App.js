@@ -7,7 +7,7 @@ import About from "./components/About";
 import Schedule from "./components/Schedule";
 import Residency from "./components/Residency";
 import WhoShouldApply from "./components/WhoShouldApply";
-import PastFounders from "./components/PastFounders";
+import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import Apply from "./components/Apply";
 import Footer from "./components/Footer";
@@ -23,7 +23,7 @@ const Landing = () => {
           <Schedule />
           <Residency />
           <WhoShouldApply />
-          <PastFounders />
+          <Pricing />
           <FAQ />
           <Apply />
         </main>
