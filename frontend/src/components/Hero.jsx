@@ -1,5 +1,7 @@
-import { PixelIndiaGate, PixelQutub, PixelBuilding, PixelMoon, PixelCloud, PixelStar, PixelDataDog, PixelNodeOps } from "./PixelArt";
+import { PixelIndiaGate, PixelQutub, PixelBuilding, PixelMoon, PixelCloud, PixelStar } from "./PixelArt";
 import { useEffect, useState } from "react";
+import ddIcon from "../assets/logos/dd_icon_rgb.png";
+import nodeopsLogo from "../assets/logos/Nodeops.png";
 
 const LUMA_URL = "https://luma.com/rc82wk5k";
 
@@ -159,7 +161,7 @@ export default function Hero() {
         {/* Floating partner badges */}
       <div className="hidden lg:block absolute top-32 right-6 z-20 float-badge">
         <div className="pixel-border-thin px-4 py-3 flex items-center gap-3" style={{ background: "#082b3b" }}>
-          <PixelDataDog className="w-6 h-6" />
+          <img src={ddIcon} alt="Datadog" className="w-7 h-7 object-contain" />
           <div>
             <span className="font-pixel text-[8px] text-[#c9c0a8] block">CREDITS</span>
             <span className="font-pixel text-[10px] text-[#d5f04e]">Datadog</span>
@@ -168,7 +170,7 @@ export default function Hero() {
       </div>
       <div className="hidden lg:block absolute top-52 right-6 z-20 float-badge-delayed">
         <div className="pixel-border-thin px-4 py-3 flex items-center gap-3" style={{ background: "#082b3b" }}>
-          <PixelNodeOps className="w-6 h-6" />
+          <img src={nodeopsLogo} alt="NodeOps" className="w-14 object-contain" />
           <div>
             <span className="font-pixel text-[8px] text-[#c9c0a8] block">DEPLOYMENT</span>
             <span className="font-pixel text-[10px] text-[#d5f04e]">NodeOps</span>

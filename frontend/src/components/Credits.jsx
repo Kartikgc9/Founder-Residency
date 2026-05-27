@@ -1,20 +1,24 @@
-import { PixelDataDog, PixelNodeOps, PixelStar } from "./PixelArt";
+import { PixelStar } from "./PixelArt";
 import { useReveal } from "../lib/useReveal";
+import ddLogo from "../assets/logos/dd_logo_h_white.png";
+import nodeopsLogo from "../assets/logos/Nodeops.png";
 
 const PARTNERS = [
   {
     name: "Datadog",
     role: "CREDITS PARTNER",
     desc: "Cloud-scale monitoring and security platform powering our observability stack.",
-    icon: PixelDataDog,
+    logo: ddLogo,
     color: "#7c3aed",
+    bg: "#0d3b4f",
   },
   {
     name: "NodeOps",
     role: "DEPLOYMENT PARTNER",
     desc: "CreateOS by NodeOps — deploy AI-generated apps in seconds. No DevOps required.",
-    icon: PixelNodeOps,
+    logo: nodeopsLogo,
     color: "#0ea5e9",
+    bg: "#0d3b4f",
   },
 ];
 
@@ -50,38 +54,39 @@ export default function Credits() {
         </p>
 
         <div className="reveal-stagger grid md:grid-cols-2 gap-6 mb-16">
-          {PARTNERS.map((p) => {
-            const Icon = p.icon;
-            return (
+          {PARTNERS.map((p) => (
+            <div
+              key={p.name}
+              className="bg-[#082b3b] p-8 pixel-border-thin flex flex-col sm:flex-row items-start gap-6"
+            >
               <div
-                key={p.name}
-                className="bg-[#082b3b] p-8 pixel-border-thin flex flex-col sm:flex-row items-start gap-6"
+                className="w-20 h-20 flex items-center justify-center pixel-border-thin shrink-0 p-2"
+                style={{ background: p.bg }}
               >
-                <div
-                  className="w-16 h-16 flex items-center justify-center pixel-border-thin shrink-0"
-                  style={{ background: "#0d3b4f" }}
-                >
-                  <Icon className="w-10 h-10" />
-                </div>
-                <div className="space-y-3">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <span
-                      className="font-pixel text-[10px] px-2 py-1"
-                      style={{ background: p.color, color: "#061f2c" }}
-                    >
-                      {p.role}
-                    </span>
-                  </div>
-                  <h3 className="font-pixel text-[#f0e8d2] text-sm sm:text-base">
-                    {p.name}
-                  </h3>
-                  <p className="font-dot text-[#c9c0a8] text-lg leading-snug">
-                    {p.desc}
-                  </p>
-                </div>
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  className="max-w-full max-h-full object-contain"
+                />
               </div>
-            );
-          })}
+              <div className="space-y-3">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span
+                    className="font-pixel text-[10px] px-2 py-1"
+                    style={{ background: p.color, color: "#ffffff" }}
+                  >
+                    {p.role}
+                  </span>
+                </div>
+                <h3 className="font-pixel text-[#f0e8d2] text-sm sm:text-base">
+                  {p.name}
+                </h3>
+                <p className="font-dot text-[#c9c0a8] text-lg leading-snug">
+                  {p.desc}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="reveal text-center">

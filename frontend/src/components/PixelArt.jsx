@@ -205,56 +205,6 @@ export function PixelRocket({ className = "" }) {
   );
 }
 
-export function PixelDataDog({ className = "" }) {
-  const P = 5;
-  const grid = [
-    "..111111..",
-    ".11111111.",
-    "1111111111",
-    "1111..1111",
-    "1111..1111",
-    ".11111111.",
-    "..1111111.",
-    "...11111..",
-    "..111111..",
-    ".11...11..",
-  ];
-  return (
-    <svg viewBox={`0 0 ${10 * P} ${grid.length * P}`} className={className} shapeRendering="crispEdges" aria-hidden>
-      {grid.map((row, y) =>
-        [...row].map((c, x) => {
-          if (c === ".") return null;
-          return <rect key={`${x}-${y}`} x={x * P} y={y * P} width={P} height={P} fill="#7c3aed" />;
-        })
-      )}
-    </svg>
-  );
-}
-
-export function PixelNodeOps({ className = "" }) {
-  const P = 5;
-  const grid = [
-    "111....111",
-    "1111...111",
-    "11111..111",
-    "111.11.111",
-    "111..11111",
-    "111...1111",
-    "111....111",
-    "111....111",
-  ];
-  return (
-    <svg viewBox={`0 0 ${11 * P} ${grid.length * P}`} className={className} shapeRendering="crispEdges" aria-hidden>
-      {grid.map((row, y) =>
-        [...row].map((c, x) => {
-          if (c === ".") return null;
-          return <rect key={`${x}-${y}`} x={x * P} y={y * P} width={P} height={P} fill="#0ea5e9" />;
-        })
-      )}
-    </svg>
-  );
-}
-
 export function PixelStar({ className = "", size = 8 }) {
   return (
     <svg viewBox="0 0 8 8" className={className} shapeRendering="crispEdges" width={size} height={size} aria-hidden>
