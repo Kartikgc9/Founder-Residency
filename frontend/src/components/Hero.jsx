@@ -117,6 +117,7 @@ export default function Hero() {
             <StatLine icon="📅" label="20 DAYS" />
             <div className="dot-divider max-w-md" />
             <StatLine icon="👥" label="15 FOUNDERS" />
+            <SpotsCounter filled={8} total={15} />
             <div className="dot-divider max-w-md" />
             <StatLine icon="📍" label="DELHI NCR" />
             <div className="dot-divider max-w-md" />
@@ -203,6 +204,32 @@ function StatLine({ icon, label }) {
         {icon}
       </div>
       <span className="font-pixel text-[#f0e8d2] text-[11px] sm:text-sm">{label}</span>
+    </div>
+  );
+}
+
+function SpotsCounter({ filled, total }) {
+  const left = total - filled;
+  return (
+    <div className="flex items-center gap-5">
+      <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-2xl pixel-border-thin bg-[#082b3b]">
+        🎯
+      </div>
+      <div className="flex flex-col gap-1.5">
+        <span className="font-pixel text-[#f0e8d2] text-[11px] sm:text-sm leading-none">
+          <span className="text-[#d5f04e]">{left}</span> / {total} SPOTS LEFT
+        </span>
+        <div className="flex gap-[3px]">
+          {Array.from({ length: total }).map((_, i) => (
+            <div
+              key={i}
+              className={`w-2.5 sm:w-3 h-2.5 sm:h-3 pixel-border-thin ${
+                i < filled ? "bg-[#d5f04e]" : "bg-[#0d3b4f]"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
