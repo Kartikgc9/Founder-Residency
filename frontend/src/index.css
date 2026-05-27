@@ -242,6 +242,14 @@ body {
     will-change: transform;
 }
 
+/* Float animation for badges */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.float-badge { animation: floatY 4s ease-in-out infinite; }
+.float-badge-delayed { animation: floatY 5s ease-in-out infinite; animation-delay: -2s; }
+
 /* Star pulse */
 @keyframes starPulse {
     0%, 100% { opacity: 0.25; }

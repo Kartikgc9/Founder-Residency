@@ -10,6 +10,7 @@ import WhoShouldApply from "./components/WhoShouldApply";
 import Pricing from "./components/Pricing";
 import FAQ from "./components/FAQ";
 import Apply from "./components/Apply";
+import Credits from "./components/Credits";
 import Footer from "./components/Footer";
 
 const Landing = () => {
@@ -26,6 +27,7 @@ const Landing = () => {
           <Pricing />
           <FAQ />
           <Apply />
+          <Credits />
         </main>
         <Footer />
       </div>
