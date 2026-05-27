@@ -1,18 +1,21 @@
 import { useReveal } from "../lib/useReveal";
+import villaNight from "../assets/images/villa-night.jpeg";
+import commonLounge from "../assets/images/common-lounge.jpeg";
+import poolRecharge from "../assets/images/pool-recharge.jpeg";
 
 const IMAGES = [
   {
-    src: "https://customer-assets.emergentagent.com/job_cd417ccc-6ec1-4a58-a2a3-7f4d8cc94d5d/artifacts/5pwcd1p3_WhatsApp%20Image%202026-05-26%20at%2011.25.52%20AM.jpeg",
+    src: villaNight,
     label: "THE VILLA / NIGHT",
     caption: "Three-storey villa lit up after hours. Where late-night sprints happen.",
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_cd417ccc-6ec1-4a58-a2a3-7f4d8cc94d5d/artifacts/knm96nlv_WhatsApp%20Image%202026-05-26%20at%2011.25.53%20AM%20%281%29.jpeg",
+    src: commonLounge,
     label: "COMMON LOUNGE",
     caption: "Open lounge with workstations, leather seating, and a glass staircase.",
   },
   {
-    src: "https://customer-assets.emergentagent.com/job_cd417ccc-6ec1-4a58-a2a3-7f4d8cc94d5d/artifacts/49tftqbu_WhatsApp%20Image%202026-05-26%20at%2011.25.53%20AM.jpeg",
+    src: poolRecharge,
     label: "POOL / RECHARGE",
     caption: "Outdoor pool with hill views. Resets, not retreats.",
   },
