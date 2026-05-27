@@ -4,7 +4,7 @@ import { useReveal } from "../lib/useReveal";
 const FAQS = [
   {
     q: "WHAT DOES IT COST?",
-    a: "The residency is $90 per person for all 20 days — fully inclusive of stay, meals, co-working access, workshops, and curated dinners. Residents cover their own travel to Delhi NCR. Spots are merit-based.",
+    a: "The residency is $120 per person for all 20 days — fully inclusive of stay, meals, co-working access, workshops, and curated dinners. Residents cover their own travel to Delhi NCR. Spots are merit-based.",
   },
   {
     q: "DO I NEED TO BE INCORPORATED?",

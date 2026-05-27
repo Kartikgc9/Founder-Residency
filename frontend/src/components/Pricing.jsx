@@ -57,7 +57,7 @@ export default function Pricing() {
 
               <div className="flex items-baseline gap-3 mb-3">
                 <span className="font-pixel text-[#d5f04e] text-[48px] sm:text-[64px] leading-none">
-                  $90
+                  $120
                 </span>
                 <span className="font-pixel text-[#c9c0a8] text-xs">/ PERSON</span>
               </div>
