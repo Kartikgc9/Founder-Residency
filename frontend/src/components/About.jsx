@@ -1,4 +1,6 @@
 import { useReveal } from "../lib/useReveal";
+import mainLogo from "../assets/logos/Main_Logo_Transparant_White.png";
+import createOSLogo from "../assets/logos/CreateOS_Logo_Transparant_White.png";
 
 export default function About() {
   const ref = useReveal();
@@ -6,10 +8,26 @@ export default function About() {
     <section
       id="about"
       data-testid="about-section"
-      className="relative py-24 sm:py-32 px-5 sm:px-8"
+      className="relative py-24 sm:py-32 px-5 sm:px-8 overflow-hidden"
       style={{ background: "#082b3b" }}
     >
-      <div className="max-w-6xl mx-auto" ref={ref}>
+      {/* Decorative floating badges */}
+      <div className="hidden lg:block absolute top-24 left-6 z-10 float-badge-left">
+        <div className="pixel-border-thin px-4 py-3 flex items-center gap-3" style={{ background: "#0d3b4f" }}>
+          <img src={mainLogo} alt="Founder Residency" className="w-16 object-contain" />
+        </div>
+      </div>
+      <div className="hidden lg:block absolute top-48 right-6 z-10 float-badge-left-delayed">
+        <div className="pixel-border-thin px-4 py-3 flex items-center gap-3" style={{ background: "#0d3b4f" }}>
+          <img src={createOSLogo} alt="CreateOS" className="w-16 object-contain" />
+          <div>
+            <span className="font-pixel text-[8px] text-[#c9c0a8] block">POWERED BY</span>
+            <span className="font-pixel text-[10px] text-[#d5f04e]">CreateOS</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-20" ref={ref}>
         <div className="reveal flex items-center gap-3 mb-8">
           <span className="font-pixel text-[#d5f04e] text-xs">{">"}</span>
           <span className="font-pixel text-[10px] sm:text-xs text-[#d5f04e] tracking-widest">
