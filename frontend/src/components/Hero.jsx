@@ -1,7 +1,10 @@
 import { PixelIndiaGate, PixelQutub, PixelBuilding, PixelMoon, PixelCloud, PixelStar } from "./PixelArt";
 import { useEffect, useState } from "react";
 import ddIcon from "../assets/logos/dd_icon_rgb.png";
+import ddLogoWhite from "../assets/logos/dd_logo_h_white.png";
 import nodeopsLogo from "../assets/logos/Nodeops.png";
+import createOSLogo from "../assets/logos/CreateOS_Logo_Transparant_White.png";
+import mainLogo from "../assets/logos/Main_Logo_Transparant_White.png";
 
 const LUMA_URL = "https://luma.com/rc82wk5k";
 
@@ -159,10 +162,28 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Floating partner badges */}
-      <div className="hidden lg:block absolute top-32 right-6 z-20 float-badge">
+        {/* Floating side logos */}
+      {/* Left side - Main Logo */}
+      <div className="hidden lg:block absolute top-28 left-6 z-20 float-badge-left">
         <div className="pixel-border-thin px-4 py-3 flex items-center gap-3" style={{ background: "#082b3b" }}>
-          <img src={ddIcon} alt="Datadog" className="w-7 h-7 object-contain" />
+          <img src={mainLogo} alt="Founder Residency" className="w-16 object-contain" />
+        </div>
+      </div>
+      {/* Left side - CreateOS */}
+      <div className="hidden lg:block absolute top-52 left-6 z-20 float-badge-left-delayed">
+        <div className="pixel-border-thin px-4 py-3 flex items-center gap-3" style={{ background: "#082b3b" }}>
+          <img src={createOSLogo} alt="CreateOS" className="w-16 object-contain" />
+          <div>
+            <span className="font-pixel text-[8px] text-[#c9c0a8] block">POWERED BY</span>
+            <span className="font-pixel text-[10px] text-[#d5f04e]">CreateOS</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Right side - existing partner badges */}
+      <div className="hidden lg:block absolute top-28 right-6 z-20 float-badge">
+        <div className="pixel-border-thin px-4 py-3 flex items-center gap-3" style={{ background: "#082b3b" }}>
+          <img src={ddLogoWhite} alt="Datadog" className="w-20 object-contain" />
           <div>
             <span className="font-pixel text-[8px] text-[#c9c0a8] block">CREDITS</span>
             <span className="font-pixel text-[10px] text-[#d5f04e]">Datadog</span>

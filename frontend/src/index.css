@@ -249,6 +249,8 @@ body {
 }
 .float-badge { animation: floatY 4s ease-in-out infinite; }
 .float-badge-delayed { animation: floatY 5s ease-in-out infinite; animation-delay: -2s; }
+.float-badge-left { animation: floatY 4.5s ease-in-out infinite; animation-delay: -1s; }
+.float-badge-left-delayed { animation: floatY 5.5s ease-in-out infinite; animation-delay: -3s; }
 
 /* Star pulse */
 @keyframes starPulse {
